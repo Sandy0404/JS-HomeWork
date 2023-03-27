@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titan | Multipurpose HTML5 Template</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!--  
+    Stylesheets
+    =============================================
+    -->
+  <!-- Default stylesheets-->
+  <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Template specific stylesheets-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
+  <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+  <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+  <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+  <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+  <!-- Main stylesheet and color file-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+</head>
+<style>
+  table {
+    border: 3px solid #f58ebb;
+    border-collapse: collapse;
+    background-color: #CCEEFF;
+    color: #eb326a;
+  }
+
+  td {
+    padding-left: 8px;
+    padding-right: 0px;
+    width: 55px;
+    border: 2px solid #f01f76;
+  }
+
+  .math {
+    display: flex;
+    justify-content: center;
+    margin: 20px 145px 70px 145px;
+  }
+
+  .table1 {
+    display: flex;
+    justify-content: center;
+    margin: 145px 145px 50px 145px;
+  }
+
+  legend {
+    color: rgb(13, 14, 14);
+    text-align: center;
+  }
+
+  fieldset {
+    width: 530px;
+    border: 3px solid #acd6ff;
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+  .st1 {
+    width: 470px;
+    border-bottom: 3px dashed #ec0808;
+    margin: 20PX;
+    padding-bottom: 10PX;
+  }
+
+  .sub {
+    width: 450px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .t1 {
+    width: 100px;
+    float: left;
+    text-align: right;
+    margin-right: 3px;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    margin: 20px 145px 80px 145px;
+  }
+
+  .left {
+    float: left;
+    margin-left: 10px;
+    font-size: 50px;
+  }
+</style>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <main>
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+          </button>
+          <a class="navbar-brand" href="HW01.html">yujie HomeWork</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="table1">
+      <form action="#" method="get" enctype="multipart/form-data">
+        <fieldset>
+          <legend>登入畫面</legend>
+
+          <div class="st1">
+            <label for="account1" id="js_name">帳號:</label>
+            <input type="text" id="account1" name="account1" autofocus placeholder="guest" autocomplete="off" size="10">
+            <label for="account1" id="name_verif"></label>
+            <br>
+            <label for="account1">(1.不可為空2.至少兩個字以上3.必須全部為中文字)</label>
+            <br>
+          </div>
+
+          <div class="st1">
+            <label for="pwd">密碼:</label>
+            <input type="password" id="pwd" name="pwd" maxlength="6">
+            <label for="pwd" id="pwd_verif"></label>
+            <br>
+            <label for="pwd">(1.不可為空2.至少6個字且必須包含英數字、特殊字元[!@#$%^&*])</label>
+            <br>
+          </div>
+
+          <div class="st1">
+            <label for="dat">日期:</label>
+            <input type="date" id="dat" name="dat">
+            <label for="dat" id="dat_verif"></label>
+            <br>
+            <label for="dat">(格式：西元年/月/日(yyyy/mm/dd))</label>
+            <br>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <h3>評分</h3>
+    <div class="stars">
+      <div id="stars" class="left">
+        <img src="./Img/star.gif" alt="">
+        <img src="./Img/star.gif" alt="">
+        <img src="./Img/star.gif" alt="">
+        <img src="./Img/star.gif" alt="">
+        <img src="./Img/star.gif" alt="">
+      </div>
+      <div id="comment" class="left">
+      </div>
+    </div>
+
+    <h3>九九乘法表</h3>
+    <div class="math">
+      <script>
+        document.write("<div>")
+        let classVal = "math";
+        document.getElementsByTagName("div")[0].setAttribute("class", classVal);
+        document.write("<table>")
+        var i = 1
+        var k;
+        while (i <= 9) {
+          document.write("<td>")
+          var j = 1;
+          while (j <= 9) {
+            k = i * j;
+            document.write(i + "x" + j + "=" + k + "<br>");
+            j++;
+          }
+          document.write("</td>")
+          i++;
+        }
+        document.write(" </table>")
+        document.write(" </div>")
+      </script>
+    </div>
+
+    <section class="module-extra-small bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-8 col-lg-9">
+            <div class="callout-text font-alt">
+              <h4 style="margin-top: 0px;">製作人:王宇婕</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!--  
+    JavaScripts
+    =============================================
+    -->
+  <script>
+    // 姓名
+    account1.onblur = function () {
+      if (account1.value.trim() === '') { // if name is blank
+        account1.classList.add('invalid');
+        name_verif.innerHTML += "<img src=\"img/error.png\">";
+        name_verif.innerHTML += '姓名不可為空';
+      } else if (account1.value.length < 2) { // if name is less than 2 characters
+        account1.classList.add('invalid');
+        name_verif.innerHTML += "<img src=\"img/error.png\">";
+        name_verif.innerHTML += '至少兩個字以上';
+      } else if (!/^[\u4e00-\u9fa5]+$/.test(account1.value)) { // if name contains non-Chinese characters
+        account1.classList.add('invalid');
+        name_verif.innerHTML += "<img src=\"img/error.png\">";
+        name_verif.innerHTML += '必須全部為中文字';
+      } else { // name is valid
+        account1.classList.remove('invalid');
+        name_verif.innerHTML = "<img src=\"img/pp.png\">";
+        name_verif.innerHTML += '';
+      }
+    };
+    account1.onfocus = function () {
+      if (this.classList.contains('invalid')) {
+        this.classList.remove('invalid');
+        name_verif.innerHTML = "";
+      }
+    };
+    // 密碼
+    pwd.onblur = function () {
+      if (pwd.value.trim() === '') { // if password is blank
+        pwd.classList.add('invalid');
+        pwd_verif.innerHTML += "<img src=\"img/error.png\">";
+        pwd_verif.innerHTML += '密碼不可為空';
+      } else if (pwd.value.length < 6 || !/^[a-zA-Z0-9!@#$%^&*]+$/.test(pwd.value)) { // if password is less than 6 characters or does not meet the requirements
+        pwd.classList.add('invalid');
+        pwd_verif.innerHTML += "<img src=\"img/error.png\">";
+        pwd_verif.innerHTML += '密碼至少6個字且必須包含英數字、特殊字元[!@#$%^&*]';
+      } else { // password is valid
+        pwd.classList.remove('invalid');
+        pwd_verif.innerHTML = "<img src=\"img/pp.png\">";
+        pwd_verif.innerHTML += '';
+      }
+    };
+    pwd.onfocus = function () {
+      if (this.classList.contains('invalid')) {
+        this.classList.remove('invalid');
+        pwd_verif.innerHTML = "";
+      }
+    };
+    // 日期
+    dat.onblur = function () {
+      if (dat.value.trim() === '') { // if date is blank
+        dat.classList.add('invalid');
+        dat_verif.innerHTML += "<img src=\"img/error.png\">";
+        dat_verif.innerHTML += '日期不可為空';
+      } else { // date is valid
+        dat.classList.remove('invalid');
+        dat_verif.innerHTML = "<img src=\"img/pp.png\">";
+        dat_verif.innerHTML += '';
+      }
+    };
+    dat.onfocus = function () {
+      if (this.classList.contains('invalid')) {
+        this.classList.remove('invalid');
+        dat_verif.innerHTML = "";
+      }
+    };
+
+
+
+    //製作一個星星評分
+    var divStars = document.getElementById("stars");
+    var divComment = document.getElementById("comment");
+    var attitude = ["差", "較差", "一般", "好", "很好"];
+    var starNum = -1; //記錄當前第幾顆星星被點擊
+    var starArray = Array.from(divStars.children); //星星數組
+
+    //滑鼠移入
+    divStars.onmouseover = function (e) {
+      if (e.target.tagName === "IMG") { //事件源是圖片
+        //把滑鼠移動到的星星替換圖片
+        e.target.src = "./Img/chngstar.gif";
+        //把滑鼠移動到的星星之前的星星替換圖片
+        var prev = e.target.previousElementSibling;
+        while (prev) {
+          prev.src = "./Img/chngstar.gif";
+          prev = prev.previousElementSibling;
+        }
+        //把滑鼠移動到的星星之後的星星替換圖片
+        var next = e.target.nextElementSibling;
+        while (next) { //把滑鼠移動到的星星之後的星星替換圖片
+          next.src = "./Img/star.gif";
+          next = next.nextElementSibling;
+        }
+
+        var index = starArray.indexOf(e.target); //找到滑鼠移動到的星星的序號
+        divComment.innerHTML = attitude[index]; //顯示對應的評論
+      }
+    }
+
+    //滑鼠點擊
+    divStars.onclick = function (e) {
+      if (e.target.tagName === "IMG") {
+        //記錄當前點擊的星星序號
+        starNum = starArray.indexOf(e.target);
+      }
+    }
+    divStars.ondblclick = function () {
+      //重置所有星星為未選中狀態
+      for (var i = 0; i < starArray.length; i++) {
+        starArray[i].setAttribute("src", "unfilled_star.png");
+      }
+      //重置當前星星序號
+      starNum = -1;
+    }
+
+    //滑鼠移出
+    divStars.onmouseout = function (e) {
+      if (starNum !== -1) { //滑鼠點擊事件發生，將評分固定在點擊的星星上
+        for (var i = 0; i < divStars.children.length; i++) {
+          if (i <= starNum) {
+            divStars.children[i].src = "./Img/chngstar.gif";
+
+          } else {
+            divStars.children[i].src = "./Img/star.gif";
+          }
+        }
+        divComment.innerHTML = attitude[starNum]; //顯示對應的評論
+      } else {
+        for (var i = 0; i < divStars.children.length; i++) {
+          divStars.children[i].src = "./Img/star.gif";
+        }
+        divComment.innerHTML = ""; //不顯示評論
+      }
+    }
+  </script>
+
+  <script src="assets/lib/jquery/dist/jquery.js"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/lib/wow/dist/wow.js"></script>
+  <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+  <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+  <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+  <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
+  <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="assets/lib/smoothscroll.js"></script>
+  <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+  <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
